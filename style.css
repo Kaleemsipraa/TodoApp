@@ -1,0 +1,211 @@
+/* CSS rest  */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Arial, Helvetica, sans-serif;
+	user-select: none;
+}
+*::selection {
+	background-color: aqua;
+	color: rgb(36, 34, 34);
+}
+::-webkit-scrollbar {
+	background-color: rgb(36, 34, 34);
+	width: 10px;
+}
+::-webkit-scrollbar-thumb {
+	background-color: aqua;
+	border-radius: 2rem;
+}
+body,
+html {
+	width: 100%;
+	height: 100%;
+	overflow-x: hidden;
+}
+nav {
+	/* position: absolute; */
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: rgb(0, 0, 0);
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding: 12px 0px;
+	position: relative;
+}
+nav ul {
+	display: flex;
+	justify-content: space-between;
+	/* width: 35%; */
+	list-style: none;
+	gap: 10px;
+}
+
+nav ul li a {
+	text-decoration: none;
+	font-size: 14px;
+	color: white;
+	text-transform: uppercase;
+	transition: 0.5s;
+}
+
+nav ul li a:hover {
+	color: aqua;
+}
+
+.log {
+	color: white;
+}
+span {
+	color: aqua;
+}
+/* style for main  */
+main {
+	width: 100vw;
+	min-height: 100vh;
+	background-color: rgb(40, 38, 38);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.top {
+	text-align: center;
+	width: 100%;
+	margin-top: 10px;
+}
+
+.main-heading {
+	font-size: 3rem;
+	color: rgb(4, 223, 223);
+	font-family: gilroy;
+}
+
+.input-container {
+	width: 100%;
+	/* background-color: red; */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.input {
+	padding: 12px 8px;
+	width: 70%;
+	border: 2px solid rgb(4, 223, 223);
+	outline: none;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	font-size: 1.3rem;
+	background-color: rgb(40, 38, 38);
+	color: white;
+}
+
+.add-btn {
+	border: none;
+	outline: none;
+	padding: 12px 25px;
+	background-color: rgb(4, 223, 223);
+	border: 2px solid rgb(4, 223, 223);
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	font-size: 1.3rem;
+	font-weight: bold;
+	color: rgb(40, 38, 38);
+	transition: 0.5s;
+}
+
+.add-btn:hover {
+	background-color: rgb(6, 158, 158);
+	cursor: pointer;
+	border: 2px solid rgb(6, 158, 158);
+}
+.bottom {
+	width: 100%;
+	/* background-color: #fff; */
+	/* padding: 0px 20px; */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 20px;
+}
+
+.task-list {
+	list-style: none;
+	font-size: 1.5rem;
+	width: 78%;
+	/* background-color: red; */
+	position: relative;
+	cursor: pointer;
+}
+
+.task-add {
+	color: white;
+	margin-top: 8px;
+	padding: 10px 10px;
+	background-color: rgb(25, 24, 24);
+	position: relative;
+}
+.delete-btn {
+	border: none;
+	outline: none;
+	font-size: 1.3rem;
+	transition: 0.5s;
+	margin-left: 10px;
+
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background-color: rgb(150, 4, 4);
+	color: white;
+	position: absolute;
+	right: 10px;
+}
+
+.date {
+	font-size: 0.8rem;
+	color: white;
+	padding-top: 5px;
+}
+
+.done {
+	text-decoration: line-through;
+	background: rgb(36, 34, 34);
+	color: gray;
+}
+.menu {
+	color: white;
+	display: none;
+	font-size: 1.3rem;
+	position: absolute;
+	top:15px;
+	right: 10px;
+}
+
+.toggle{
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	top: 0;
+	right: 0%;
+	background-color: black;
+	width: 100%;
+	height: 100vh;
+	gap: 20px;	
+}
+
+@media (max-width: 600px) {
+	nav ul {
+		display: none;
+	}
+	.menu {
+		display: block;
+	}
+	.main-heading {
+		font-size: 2rem;
+	}
+}
